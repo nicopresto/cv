@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Nicholas D. Preston | Digital Disease Ecologist</title>
+<style type="text/css">
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+body {
+  margin: 0;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+p,
+pre {
+  margin: 1em 0;
+}
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+small {
+  font-size: 75%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0;
+}
+form {
+  margin: 0;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body.pdf {
+  color: black;
+}
+body.pdf a {
+  text-decoration: none;
+  color: black;
+}
+body.pdf .container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  background: none;
+  border: none;
+  border-width: 8px 0 2px 0;
+  text-align: left;
+}
+body.pdf .resume {
+  position: relative;
+  padding: 40px 80px;
+}
+body.pdf a[href$='.pdf'] {
+  display: none;
+}
+body.pdf h1 {
+  letter-spacing: 0;
+  margin-top: 0;
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+body.pdf h2 {
+  letter-spacing: 0;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: normal;
+}
+body.pdf h3 {
+  float: left;
+  width: 16%;
+  font-style: normal;
+}
+body.pdf h3+p {
+  float: left;
+  width: 84%;
+}
+body.pdf blockquote {
+  top: 40px;
+  right: 50px;
+  position: absolute;
+}
+body.pdf ul li {
+  width: 28%;
+  float: left;
+}
+body.pdf ul dl {
+  margin: 0;
+  padding: 0.3em 0 0;
+}
+body.pdf ul dl dt {
+  font-size: 122%;
+  font-weight: normal;
+  margin: 0 0 .75em;
+}
+body.pdf ul dl dd {
+  padding: 0 4em 0 0;
+}
+body.pdf ol {
+  float: left;
+  width: 84%;
+  margin: .7em 0 0;
+}
+body.pdf ol li {
+  width: 33%;
+  margin: 0;
+}
+body.pdf ol li:nth-child(3n) {
+  width: 34%;
+}
+body.pdf ol li:nth-child(1),
+body.pdf ol li:nth-child(2),
+body.pdf ol li:nth-child(3) {
+  border-top: none;
+}
+body.pdf dl {
+  margin: .7em 0 0;
+  page-break-inside: avoid !important;
+  display: block;
+  width: 84%;
+  float: left;
+}
+body.pdf dl strong {
+  float: right;
+  margin-top: -2em;
+}
+body.pdf dl em {
+  font-size: 130%;
+  font-style: normal;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+body {
+  font-family: 'Hoefler Text', Times New Roman, Times, serif;
+  color: #444;
+}
+h1,
+h2,
+h3,
+h4,
+ul dl dt {
+  font-family: Futura, "Century Gothic", AppleGothic, sans-serif;
+}
+.container {
+  margin: 0 auto;
+  padding: 0;
+  background: whiteSmoke;
+  border: solid #666;
+  border-width: 8px 0 2px 0;
+  text-align: left;
+}
+.resume {
+  position: relative;
+  padding: 10px 20px;
+}
+a {
+  color: #990003;
+}
+a[href$='.pdf'] {
+  display: inline-block;
+  background: #666;
+  color: white;
+  padding: 6px 12px;
+  margin-bottom: 6px;
+  text-decoration: none;
+}
+blockquote {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4em;
+}
+hr {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 18px auto;
+  width: 100%;
+  clear: both;
+  border: none;
+  border-top: 1px solid #CCC;
+  font-size: 1px;
+  line-height: 0;
+  overflow: visible;
+  page-break-after: avoid;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 36px;
+  letter-spacing: -1px;
+  font-weight: normal;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-style: italic;
+  letter-spacing: -1px;
+  font-weight: normal;
+}
+h3 {
+  margin: 0;
+  padding: 0 0 .5em;
+  font-size: 150%;
+  font-style: italic;
+  font-weight: normal;
+}
+h3+p {
+  margin: .6em 0 16px;
+  padding: 0;
+  display: block;
+  font-size: 104%;
+  line-height: 24px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+}
+ul dl {
+  margin: .3em 0 0;
+  padding: 0;
+  width: 100%;
+}
+ul dl dt {
+  font-size: 100%;
+}
+ul dl dd {
+  margin: 0 0 1em;
+  padding: 0 2em 0 0;
+  font-size: .8em;
+  line-height: 1.5em;
+}
+ol {
+  margin: 0;
+  padding: 0 0 .75em;
+  width: 84%;
+  display: inline-block;
+}
+ol li {
+  margin: 0 0 0 1em;
+  padding: 0;
+  border-top: 1px solid #CCCCCC;
+  width: 100%;
+  float: left;
+  list-style: none;
+  line-height: 24px;
+  font-size: 14px;
+}
+ol li:nth-child(1) {
+  border-top: none;
+}
+dl {
+  display: inline-block;
+  width: 75%;
+  margin: 0;
+  padding: 0;
+}
+dl dt {
+  margin: 0;
+  padding: 0;
+  font-size: 140%;
+}
+dl dd {
+  margin: 0 0 1.5em;
+  padding: 0;
+  font-size: 80%;
+  line-height: 1.4em;
+}
+dl strong {
+  display: block;
+}
+dl em {
+  display: block;
+  font-size: 110%;
+  margin: .15em 0 .5em;
+  font-style: bold;
+}
+#footer {
+  display: none;
+}
+#footer + p {
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+}
+
+@media screen and (min-width: 37.5em) {
+  body {
+    padding: 2em 0;
+  }
+  blockquote {
+    top: 10px;
+    right: 50px;
+    position: absolute;
+  }
+  h1 {
+    margin-top: .5em;
+  }
+  ol {
+    margin: 0 0 0 1em;
+  }
+  ol li {
+    width: 50%;
+    margin: 0;
+  }
+  ol li:nth-child(1),
+  ol li:nth-child(2) {
+    border-top: none;
+  }
+}
+@media screen and (min-width: 57em) {
+  .container {
+    width: 912px;
+  }
+  .resume {
+    position: relative;
+    padding: 40px 50px;
+  }
+  blockquote {
+    top: 40px;
+    right: 50px;
+    position: absolute;
+  }
+  h1 {
+    margin-top: 0;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: normal;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px;
+    font-weight: normal;
+  }
+  h3 {
+    float: left;
+    width: 16%;
+  }
+  h3+p {
+    float: left;
+    width: 84%;
+  }
+  ul li {
+    width: 28%;
+    float: left;
+  }
+  ul dl dt {
+    font-size: 122%;
+    font-weight: normal;
+    margin-bottom: .75em;
+  }
+  ul dl dd {
+    padding: 0 4em 0 0;
+  }
+  ol {
+    float: left;
+    width: 84%;
+    margin: .6em 0 0;
+  }
+  ol li {
+    width: 33%;
+    margin: 0;
+  }
+  ol li:nth-child(3n) {
+    width: 34%;
+  }
+  ol li:nth-child(1),
+  ol li:nth-child(2),
+  ol li:nth-child(3) {
+    border-top: none;
+  }
+  dl {
+    margin: .5em 0 0;
+  }
+  dl strong {
+    float: right;
+    margin-top: -2em;
+  }
+  dl em {
+    font-size: 130%;
+    font-style: normal;
+  }
+}
+
+</style>
+</head>
+
+<body class="">
+
+<div class="container">
+    <div class="resume">
+        <h1>Nicholas D. Preston</h1>
+
+<h2>Digital Disease Ecologist</h2>
+
+<blockquote>
+  <p><a href="nicopresto@gmail.com">nicopresto@gmail.com</a><br />
+  (608) 698-6425<br />
+  Boston, MA</p>
+</blockquote>
+
+<hr />
+
+<h3 id="interest">Interests</h3>
+
+<ul>
+<li><dl>
+<dt>Disease Ecology</dt>
+<dd>Ecosystem and network approaches to the ecological determinants of disease.</dd>
+</dl></li>
+<li><dl>
+<dt>Data Science</dt>
+<dd>Analyzing digital media and instrumented systems for threats to ecosystems and health.</dd>
+</dl></li>
+<li><dl>
+<dt>Global Health</dt>
+<dd>Health reporting networks, diagnostics, biosurveillance, and the drivers of disease.</dd>
+</dl></li>
+</ul>
+
+<hr />
+
+<h3 id="profile">Profile</h3>
+
+<p>I am interested in the intersection of global ecology, computing, and health. My research leverages data science, web development, and virtual laboratories to understand infectious disease dynamics in the context of global ecosystems.</p>
+
+<hr />
+
+<h3 id="experience">Recent experience</h3>
+
+<dl>
+<dt>Boston Children&#8217;s Hospital Informatics Program (CHIP)</dt>
+<dd><em>Research Fellow - HealthMap</em>
+<strong>2014-present</strong>
+Research on digital disease detection and the drivers of disease emergence. Developing data services and analytics for disease biosurveillance.</dd>
+
+<dt>EcoHealth Alliance (EHA)</dt>
+<dd><em>Director of Data Science and Research Technology</em>
+<strong>2013-2014</strong>
+I founded the Data Science and Research Technology (DART) lab at EHA. As Principal Investigator for diagnostic web platforms, I oversaw a team of software developers, data scientists, epidemiologists, and disease ecologists designing intelligent applications for diagnosing diseases from emergent media, with an emphasis on identifying novel outbreaks, emerging infectious disease events, and diseases of unknown etiology. The systems combined automated data collection, machine learning, natural language processing, web visualizations, disease situation dashboards, data processing tools for analysts, and adaptive diagnostic models.</dd>
+
+<dt>EcoHealth Alliance (EHA)</dt>
+<dd><em>Senior Research Scientist</em>
+<strong>2011-2013</strong>
+Surveillance and analysis of diseases dynamics in humans and wildlife, mapping hotspots of emerging infectious diseases and global threats, building capacity in data science, researching the history of emerging infectious diseases, and developing virtual laboratories for collaborative epidemiology and biosurveillance.</dd>
+</dl>
+
+<hr />
+
+<h3 id="education">Education</h3>
+
+<dl>
+<dt>UW-Madison Center for Sustainability and the Global Environment, Wisconsin, USA</dt>
+<dd><em>Postdoctoral Scientist</em>
+<strong>2011</strong>
+The dotSkapes Project: An open source virtual laboratory for collaborative global health research</dd>
+
+<dt>UW-Madison Center for Limnology, Wisconsin, USA</dt>
+<dd><em>Ph.D.</em>
+<strong>2009</strong>
+Dissertation: External drivers of lakes in forested watersheds: Aeolian organic carbon inputs and ice phenology.</dd>
+
+<dt>UW-Madison Global Health Institute, Wisconsin, USA</dt>
+<dd><em>Certificate, Global Health</em>
+<strong>2009</strong>
+Coursework in epidemiology, health systems, and EcoHealth field experience.</dd>
+
+<dt>University of Guelph, Ontario, Canada</dt>
+<dd><em>B.Sc.</em>
+<strong>2002</strong>
+Major: Biological Sciences (Dean&#8217;s list) Minor: Mathematical Sciences (Statistics, Mathematics, and Computer Science)</dd>
+
+<dt>Universite de Joseph Fourier, Grenoble, France</dt>
+<dd><em>International Studies</em>
+<strong>2000</strong>
+Biology of Organisms and Populations (Ontario-Rhone-Alps Bursary)</dd>
+</dl>
+
+<hr />
+
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /></p>
+
+<hr />
+
+<h3 id="papers">Papers</h3>
+
+<dl>
+<dt>Preston N.D., Daszak P., and Colwell R.R.</dt>
+<dd>
+<strong>2013</strong>
+The human environment interface: Applying ecosystem concepts to health. Curr Top Microbiol Immunol. PMID: 23633105.</dd>
+
+<dt>Hanson P.C., Hamilton D.P., Stanley E.H., Preston N.D., Langman O.C., and Kara E.L.</dt>
+<dd>
+<strong>2011</strong>
+Fate of allochthonous dissolved organic carbon in lakes: A quantitative approach. PLoS ONE, 6(7), e21884. PMCID: PMC3136486.</dd>
+
+<dt>Preston N.D., Rusak J.A.</dt>
+<dd>
+<strong>2010</strong>
+Homage to Hutchinson: Does inter-annual climate variability affect zooplankton density and diversity? Hydrobiologia, 653, 165–177. doi: 10.1007/s10750-010-0352-2.</dd>
+
+<dt>Biggs, R., Diebel M.W., Gilroy D., Kamarainen A.M., Kornis M.S., Preston N.D., Schmitz J.E., Uejio C.K., Van De Bogert M.C., Weidel B.C., West P.C., Zaks D.P.M., Carpenter S.R.</dt>
+<dd>
+<strong>2010</strong>
+Preparing for the future: Teaching scenario planning at the graduate level. Frontiers in Ecology and the Environment, 8(5), 267–273.</dd>
+
+<dt>Solomon C.T., Cole J.J., Doucett R.R., Pace M.L., Preston N.D., Smith L.E., Weidel B.C.</dt>
+<dd>
+<strong>2009</strong>
+The influence of environmental water on the hydrogen stable isotope ratio in aquatic consumers. Oecologia, 161(2), 313–324. PMID: 19471971.</dd>
+
+<dt>Preston N.D., Carpenter S.R., Cole J.J., Pace M.L.</dt>
+<dd>
+<strong>2008</strong>
+Airborne carbon deposition on a remote forested lake. Aquatic Sciences, 70(3), 213–224. doi: 10.1007/s00027-008-8074-5.</dd>
+
+<dt>Pace M.L., Carpenter S.L., Cole J.J., Coloso J.J., Kitchell J.F., Hodgson J.R., Middelburg J.J., Preston N.D., Solomon C.T., Weidel B.C.</dt>
+<dd>
+<strong>2007</strong>
+Does terrestrial organic carbon subsidize the planktonic food web in a clear-water lake. Limnology and Oceanography, 52(5), 2177–2189. doi: 10.4319/lo.2007.52.5.2177.</dd>
+</dl>
+
+<hr />
+
+<h3 id="talks">Talks</h3>
+
+<dl>
+<dt>Healthscapes: A new web platform for global environmental health research.</dt>
+<dd>
+<strong>2011</strong>
+American Society for Photogrammetry and Remote Sensing. Milwaukee, Wisconsin (USA).</dd>
+
+<dt>Healthscapes: A web platform for integrating and analyzing health and environmental data across scales.</dt>
+<dd>
+<strong>2011</strong>
+One Health Congress, Melbourne (Australia).</dd>
+
+<dt>HealthScapes: A new web framework for studying the environmental determinants of global public health.</dt>
+<dd>
+<strong>2010</strong>
+International Association for Ecology and Health (EcoHealth), London, London (UK).</dd>
+
+<dt>EcoHealth service learning in Autlan, Mexico.</dt>
+<dd>
+<strong>2009</strong>
+Global Health Symposium (GHS), Madison, WI (USA).</dd>
+
+<dt>Healthscapes: A new tool for exploring the environmental determinants of infectious disease.</dt>
+<dd>
+<strong>2009</strong>
+National Environmental Public Health Conference (NEPHC), Atlanta, GA (USA).</dd>
+
+<dt>Terrestrial support of lakes across the landscape.</dt>
+<dd>
+<strong>2008</strong>
+Ecological Society of America (ESA), Milwaukee, WI (USA).</dd>
+
+<dt>Driving allochthony: The rain of carbon and airborne deposition on lakes.</dt>
+<dd>
+<strong>2007</strong>
+Advancing the Science of Limnology and Oceanography (ASLO), Santa Fe, NM (USA).</dd>
+
+<dt>Climate-driven changes in spring conditions: The influence of ice cover on spring zooplankton abundance.</dt>
+<dd>
+<strong>2006</strong>
+Advancing the Science of Limnology and Oceanography (ASLO), Victoria, BC (Canada).</dd>
+</dl>
+
+<hr />
+
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /></p>
+
+<hr />
+
+<h3 id="grants">Grants, Awards, and Contracts</h3>
+
+<dl>
+<dt>Defense Threat Reduction Agency (PI)</dt>
+<dd>Rapid Disease Identification Tool
+<strong>2013</strong></dd>
+
+<dt>Defense Threat Reduction Agency (Co-I)</dt>
+<dd>Biosurveillance Ecosystem
+<strong>2013</strong></dd>
+
+<dt>Skoll Global Threats Fund (PI)</dt>
+<dd>Global Vulnerability Maps
+<strong>2012</strong></dd>
+
+<dt>Vilas Travel Grant</dt>
+<dd>
+<strong>2009</strong></dd>
+
+<dt>ASLO Student Grant</dt>
+<dd>
+<strong>2007</strong></dd>
+
+<dt>Anna Grant Birge Award</dt>
+<dd>
+<strong>2006</strong></dd>
+
+<dt>John Jefferson Davis Travel Award</dt>
+<dd>
+<strong>2006</strong></dd>
+
+<dt>Ontario-Rhone-Alps Bursary</dt>
+<dd>
+<strong>1999</strong></dd>
+</dl>
+
+<hr />
+
+<h3 id="service">Recent Service</h3>
+
+<dl>
+<dt>EcoHealth Journal (Review Editor)</dt>
+<dd>
+<strong>2013-2014</strong></dd>
+
+<dt>NYU Capstone (Mentor)</dt>
+<dd>
+<strong>2013-2014</strong></dd>
+</dl>
+
+<hr />
+
+<h3 id="lecture">Guest Lectures</h3>
+
+<dl>
+<dt>Rutgers</dt>
+<dd>
+<strong>2014</strong>
+School of Environmental and Biological Sciences</dd>
+
+<dt>EcoHealthNet</dt>
+<dd>
+<strong>2012</strong>
+Epidemiology and Outbreak Investigation Workshop</dd>
+
+<dt>NCAR/CDC</dt>
+<dd>
+<strong>2012</strong>
+Workshop on Climate and Health</dd>
+
+<dt>UW-Madison</dt>
+<dd>
+<strong>2011</strong>
+Population Health 803 - Monitoring Population Health</dd>
+
+<dt>EcoHealthNet</dt>
+<dd>
+<strong>2011</strong>
+Disease Mapping and Modeling Workshop</dd>
+
+<dt>UW-Madison</dt>
+<dd>
+<strong>2010</strong>
+Population Health 740 - Health Impact Assessment of Global Environmental Change</dd>
+</dl>
+
+<hr />
+
+<h3 id="technical">Technical</h3>
+
+<ol>
+<li>Python</li>
+<li>R</li>
+<li>Javascript</li>
+<li>Agile Project Management</li>
+<li>Databases (NoSQL &amp; SQL)</li>
+<li>Geospatial Analysis</li>
+<li>Network Analysis</li>
+<li>Natural Language Processing</li>
+<li>Machine Learning</li>
+</ol>
+
+<h3 id="footer">Footer</h3>
+
+<p>Nicholas Preston &#8212; <a href="nicopresto@gmail.com">nicopresto@gmail.com</a> &#8212; (608) 698-6425</p>
+
+<hr />
+
+    </div>
+</div>
+
+</body>
+</html>
