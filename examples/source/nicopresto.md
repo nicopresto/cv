@@ -2,7 +2,9 @@
 ## Digital Disease Ecologist
 
 > [nicopresto@gmail.com](nicopresto@gmail.com)  
-> (608) 698-6425
+> (608) 698-6425  
+> Boston, MA  
+
 
 ------
 
@@ -27,10 +29,15 @@ I am interested in the intersection of global ecology, computing, and health. My
 
 ### Recent experience {#experience}
 
+Boston Children's Hospital Informatics Program (CHIP)
+: *Research Fellow - HealthMap*
+ __2014-present__
+  Research on digital disease detection and the drivers of disease emergence. Developing data services and analytics for disease biosurveillance.
+
 EcoHealth Alliance (EHA)
 : *Director of Data Science and Research Technology*
   __2013-2014__
-  I founded the Data Science and Research Technology (DART) lab at EHA. As Principal Investigator for our diagnostic web platforms, I oversee a team of software developers, data scientists, epidemiologists, and disease ecologists designing intelligent applications for diagnosing diseases from emergent media, with an emphasis on identifying novel outbreaks, emerging infectious disease events, and diseases of unknown etiology. The systems combine automated data collection, machine learning, natural language processing, web visualizations, disease situation dashboards, data processing tools for analysts, and adaptive diagnostic models.
+  I founded the Data Science and Research Technology (DART) lab at EHA. As Principal Investigator for diagnostic web platforms, I oversaw a team of software developers, data scientists, epidemiologists, and disease ecologists designing intelligent applications for diagnosing diseases from emergent media, with an emphasis on identifying novel outbreaks, emerging infectious disease events, and diseases of unknown etiology. The systems combined automated data collection, machine learning, natural language processing, web visualizations, disease situation dashboards, data processing tools for analysts, and adaptive diagnostic models.
 
 EcoHealth Alliance (EHA)
 : *Senior Research Scientist*
